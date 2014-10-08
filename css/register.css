@@ -1,0 +1,240 @@
+
+body {
+    background-color: #d0e4fe;
+
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#wrapper {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #fff;
+    border-color: #aaa -moz-use-text-color #888;
+    border-image: none;
+    border-left: medium none;
+    border-right: medium none;
+    border-style: solid none;
+    border-width: 1% medium;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+    padding: 2%;
+    max-width: 960px;
+}
+
+#header {
+    margin-bottom: 3px;
+}
+
+#header .logo {
+    float: left;
+    width: 20%;
+	margin-bottom:10px;
+}
+
+#header .title {
+    float: right;
+    width: 80%;
+}
+
+.fclear {
+    clear:both;
+}
+
+a {
+    -color: #006a30;
+}
+a {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+img {
+    border: 0 none;
+    height: auto;
+    max-width: 35%;
+    vertical-align: middle;
+}
+
+#header .title {
+    float: right;
+    width: 70%;
+}
+
+
+h1 {
+    margin-bottom: 0.25em;
+}
+h1 {
+    font-size: 24px;
+	text-align: right;
+}
+h1, h2, h3 {
+    line-height: 30px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 5px 0;
+}
+
+.linklist {
+    background-color: inherit;
+    border-radius: 4px;
+    list-style: none outside none;
+    margin: 0 0 -15px;
+    padding: 3px 9px 0 15px;
+    text-align: right;
+}
+
+.linklist > li {
+    display: inline-block;
+    text-shadow: 0 1px 0 #ffffff;
+	list-style: none outside none;
+    text-align: right;
+}
+li {
+    line-height: 15px;
+}
+
+.page_body {
+    border-top: 1px solid #ccc;
+    padding: 20px;
+	margin-top:0;
+	height: auto;
+}
+
+#side_a {
+    float: left;
+    padding: 0;
+    width: 40%;
+}
+#side_a h4 {
+    margin-bottom: 5px;
+}
+#side_a p {
+    font-size: 15px;
+    margin-bottom: 10px;
+	color: #666;
+}
+
+#side_b {
+    border-left: 1px solid #ccc;
+    float: right;
+    height: auto;
+    padding: 0 0 0 35px;
+    width: 50%;
+}
+
+.side_text {
+    float: left;
+    padding-left: 15px;
+    width: 310px;
+}
+
+
+.block_sep {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: auto;
+    margin-bottom: 30px;
+    padding: 10px 5px;
+}
+
+.footer {
+    border-top: 1px solid #666;
+    bottom: -10px;
+    color: #00411d;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    position: relative;
+    text-align: right;
+}
+
+.input_row {
+    margin-bottom:10px;
+}
+.input_row label {
+    font-size:14px;
+}
+
+.input_row input[type="text"],  .input_row input[type="password"], select{
+    display:block;
+    margin:3px 0;
+    width:195px;
+    border-radius: 4px;
+    color: #555555;
+    display: inline-block;
+    font-size: 14px;
+    height: 25px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 4px 6px;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+.input_row input[type="text"]:focus{
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0 none;
+}
+.input_row .info{
+    color:#75C5F0;
+    font-style:italic;
+    font-size:15px;
+    width:350px;
+    display:block;
+}
+
+
+.input_row .input {
+    float:left;
+    width:40%;
+    -min-width:350px;
+}
+.input_row .help {
+    color:#666;
+    float:right;
+    width:200px;
+    padding:0 15px;
+    border-left:solid 1px #bbb;
+}
+.input_row .help h4 {
+    border-bottom:solid 1px #bbb;
+    margin-bottom:5px;
+    padding-bottom:7px;
+    font-size:14.5px;
+    font-weight:normal;
+}
+.input_row .help p {
+    margin-bottom:15px;
+}
+
+
+input[type="submit"] {
+    background: none repeat scroll 0 0 #0088cc;
+    border: 0 none;
+    color: #fff;
+    font-size: 17px;
+    height: 37px;
+    margin: 0 auto;
+    width: 48%;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 1px 0 green;
+
+}
+
+input[type="submit"]:hover{
+	background: none repeat scroll 0 0 #0088ee;
+}
+

@@ -1,0 +1,85 @@
+[10-Sep-2014 13:12:24] PHP Parse error:  syntax error, unexpected $end, expecting T_FUNCTION in /home/edostate/public_html/bipatas/application/controllers/staff.php on line 229
+[10-Sep-2014 13:15:06] PHP Parse error:  syntax error, unexpected '*' in /home/edostate/public_html/bipatas/application/views/pages/staff.php on line 65
+[10-Sep-2014 13:15:47] PHP Parse error:  syntax error, unexpected '*' in /home/edostate/public_html/bipatas/application/views/pages/staff.php on line 65
+[10-Sep-2014 13:41:02] PHP Parse error:  syntax error, unexpected $end in /home/edostate/public_html/bipatas/application/controllers/register.php on line 441
+[10-Sep-2014 16:18:03] PHP Parse error:  syntax error, unexpected '<' in /home/edostate/public_html/bipatas/application/views/pages/staff.php on line 65
+[10-Sep-2014 17:16:10] PHP Parse error:  syntax error, unexpected '<' in /home/edostate/public_html/bipatas/application/views/partials/p_info_form.php on line 117
+[10-Sep-2014 17:17:51] PHP Parse error:  syntax error, unexpected '<' in /home/edostate/public_html/bipatas/application/views/partials/p_info_form.php on line 117
+[10-Sep-2014 17:18:57] PHP Parse error:  syntax error, unexpected '<' in /home/edostate/public_html/bipatas/application/views/partials/p_info_form.php on line 118
+[10-Sep-2014 18:18:51] PHP Parse error:  syntax error, unexpected '*' in /home/edostate/public_html/bipatas/application/views/pages/staff.php on line 65
+[10-Sep-2014 18:23:49] PHP Parse error:  syntax error, unexpected '*' in /home/edostate/public_html/bipatas/application/views/pages/staff.php on line 65
+[10-Sep-2014 18:34:39] PHP Parse error:  syntax error, unexpected '*' in /home/edostate/public_html/bipatas/application/views/pages/staff.php on line 65
+[10-Sep-2014 18:34:59] PHP Parse error:  syntax error, unexpected '*' in /home/edostate/public_html/bipatas/application/views/pages/staff.php on line 65
+[10-Sep-2014 18:36:20] PHP Parse error:  syntax error, unexpected ';' in /home/edostate/public_html/bipatas/application/views/partials/p_info_form.php on line 361
+[11-Sep-2014 12:54:21] PHP Parse error:  syntax error, unexpected '}' in /home/edostate/public_html/bipatas/application/controllers/home.php on line 176
+[11-Sep-2014 13:36:23] PHP Fatal error:  Call to a member function confirm_staff_existence() on a non-object in /home/edostate/public_html/bipatas/application/controllers/home.php on line 38
+[11-Sep-2014 13:40:06] PHP Fatal error:  Call to a member function confirm_staff_existence() on a non-object in /home/edostate/public_html/bipatas/application/controllers/home.php on line 38
+[11-Sep-2014 13:42:01] PHP Parse error:  syntax error, unexpected T_IF in /home/edostate/public_html/bipatas/application/controllers/home.php on line 39
+[11-Sep-2014 13:42:30] PHP Fatal error:  Call to a member function confirm_staff_existence() on a non-object in /home/edostate/public_html/bipatas/application/controllers/home.php on line 38
+[11-Sep-2014 13:46:03] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/edostate/public_html/bipatas/application/models/personal_information_model.php on line 45
+[11-Sep-2014 13:49:40] PHP Parse error:  syntax error, unexpected '}' in /home/edostate/public_html/bipatas/application/models/personal_information_model.php on line 236
+[11-Sep-2014 14:00:07] PHP Parse error:  syntax error, unexpected ')' in /home/edostate/public_html/bipatas/application/models/employment_record_model.php on line 39
+[11-Sep-2014 15:14:48] PHP Parse error:  syntax error, unexpected $end in /home/edostate/public_html/bipatas/application/controllers/register.php on line 267
+[11-Sep-2014 16:24:45] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_FUNCTION in /home/edostate/public_html/bipatas/application/controllers/staff.php on line 292
+[11-Sep-2014 16:24:56] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_FUNCTION in /home/edostate/public_html/bipatas/application/controllers/staff.php on line 292
+[11-Sep-2014 16:26:40] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_FUNCTION in /home/edostate/public_html/bipatas/application/controllers/staff.php on line 292
+[11-Sep-2014 16:26:48] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_FUNCTION in /home/edostate/public_html/bipatas/application/controllers/staff.php on line 292
+[11-Sep-2014 16:27:10] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_FUNCTION in /home/edostate/public_html/bipatas/application/controllers/staff.php on line 292
+[11-Sep-2014 18:17:14] PHP Fatal error:  Using $this when not in object context in /home/edostate/public_html/bipatas/application/helpers/registration_helper.php on line 36
+[11-Sep-2014 18:17:23] PHP Fatal error:  Using $this when not in object context in /home/edostate/public_html/bipatas/application/helpers/registration_helper.php on line 36
+[15-Sep-2014 09:07:23] PHP Fatal error:  Call to a member function model() on a non-object in /home/edostate/public_html/bipatas/application/controllers/register.php on line 19
+[15-Sep-2014 09:08:01] PHP Fatal error:  Call to a member function model() on a non-object in /home/edostate/public_html/bipatas/application/controllers/register.php on line 19
+[15-Sep-2014 09:11:22] PHP Parse error:  syntax error, unexpected $end in /home/edostate/public_html/bipatas/application/controllers/register.php on line 78
+[15-Sep-2014 09:30:24] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 645
+[15-Sep-2014 09:39:23] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'base_url/js/mike.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/edostate/public_html/bipatas/application/views/pages/p_info.php on line 228
+[15-Sep-2014 09:51:35] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home/edostate/public_html/bipatas/application/views/pages/p_info.php on line 35
+[15-Sep-2014 09:52:32] PHP Fatal error:  Call to undefined function  int() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 640
+[15-Sep-2014 09:55:40] PHP Fatal error:  Call to undefined function  int() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 640
+[15-Sep-2014 09:58:18] PHP Fatal error:  Call to undefined function  int() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 640
+[15-Sep-2014 10:00:14] PHP Fatal error:  Call to a member function get_lgas_of_state() on a non-object in /home/edostate/public_html/bipatas/application/controllers/register.php on line 642
+[15-Sep-2014 10:02:22] PHP Fatal error:  Call to a member function get_lgas_of_state() on a non-object in /home/edostate/public_html/bipatas/application/controllers/register.php on line 643
+[15-Sep-2014 10:02:26] PHP Fatal error:  Call to a member function get_lgas_of_state() on a non-object in /home/edostate/public_html/bipatas/application/controllers/register.php on line 643
+[15-Sep-2014 12:30:57] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 652
+[15-Sep-2014 12:31:00] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 652
+[15-Sep-2014 12:31:19] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 652
+[15-Sep-2014 12:32:30] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 652
+[15-Sep-2014 12:32:35] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 652
+[15-Sep-2014 12:43:47] PHP Parse error:  syntax error, unexpected T_IF in /home/edostate/public_html/bipatas/application/views/pages/p_info.php on line 232
+[15-Sep-2014 12:44:59] PHP Parse error:  syntax error, unexpected T_IF in /home/edostate/public_html/bipatas/application/views/pages/p_info.php on line 232
+[15-Sep-2014 14:05:53] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ')' in /home/edostate/public_html/bipatas/application/views/partials/p_info_form.php on line 203
+[15-Sep-2014 14:06:49] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ')' in /home/edostate/public_html/bipatas/application/views/partials/p_info_form.php on line 203
+[15-Sep-2014 14:30:45] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[15-Sep-2014 14:34:01] PHP Fatal error:  Call to a member function get_all_states() on a non-object in /home/edostate/public_html/bipatas/application/views/partials/p_info_form.php on line 202
+[15-Sep-2014 14:36:12] PHP Fatal error:  Call to a member function get_all_states() on a non-object in /home/edostate/public_html/bipatas/application/views/partials/p_info_form.php on line 200
+[15-Sep-2014 14:46:20] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/edostate/public_html/bipatas/application/views/partials/p_info_form.php on line 201
+[15-Sep-2014 15:02:40] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 637
+[15-Sep-2014 15:02:41] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 637
+[15-Sep-2014 15:02:48] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 637
+[15-Sep-2014 16:08:28] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 637
+[15-Sep-2014 16:08:51] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 637
+[15-Sep-2014 16:10:54] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[15-Sep-2014 16:10:59] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[15-Sep-2014 16:11:04] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[15-Sep-2014 16:11:05] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[15-Sep-2014 16:14:21] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[15-Sep-2014 16:14:22] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[15-Sep-2014 16:14:33] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[16-Sep-2014 15:35:39] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[16-Sep-2014 15:35:39] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[16-Sep-2014 15:35:39] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[16-Sep-2014 15:35:53] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[16-Sep-2014 15:36:31] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[16-Sep-2014 15:36:31] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 621
+[17-Sep-2014 11:17:01] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 637
+[17-Sep-2014 11:17:01] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 637
+[17-Sep-2014 11:17:17] PHP Fatal error:  Call to undefined function  remove_item_with_value() in /home/edostate/public_html/bipatas/application/controllers/register.php on line 637
+[30-Sep-2014 10:55:19] PHP Parse error:  syntax error, unexpected $end in /home/edostate/public_html/bipatas/application/controllers/register.php on line 74
+[30-Sep-2014 11:11:36] PHP Parse error:  syntax error, unexpected ',' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 24
+[30-Sep-2014 11:11:47] PHP Parse error:  syntax error, unexpected ',' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 24
+[30-Sep-2014 11:11:52] PHP Parse error:  syntax error, unexpected ',' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 24
+[30-Sep-2014 11:11:57] PHP Parse error:  syntax error, unexpected ',' in /home/edostate/public_html/bipatas/application/controllers/register.php on line 24
+[30-Sep-2014 14:48:01] PHP Parse error:  syntax error, unexpected $end in /home/edostate/public_html/bipatas/application/views/pages/p_info.php on line 238
+[02-Oct-2014 11:43:06] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/edostate/public_html/bipatas/application/controllers/register.php on line 115
+[02-Oct-2014 11:49:12] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 64491521 bytes) in /home/edostate/public_html/bipatas/system/core/Exceptions.php on line 185
+[02-Oct-2014 11:54:25] PHP Parse error:  syntax error, unexpected T_ENDWHILE in /home/edostate/public_html/bipatas/application/views/pages/e_records.php on line 103
+[02-Oct-2014 15:50:21] PHP Parse error:  syntax error, unexpected ';' in /home/edostate/public_html/bipatas/application/views/pages/b_details.php on line 43
