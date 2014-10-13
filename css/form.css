@@ -258,7 +258,7 @@ span.input_err {
     cursor:wait;
 }
 .box_wrapper div.left:first-child {
-    border-top:1px solid #eee;
+    border-top:0px solid #eee;
     border-bottom:0px solid #eee !important;
 }
 .box_wrapper .right {
@@ -611,11 +611,13 @@ textarea{
 .add_button {
     background: none repeat scroll 0 0 #0088ee;
     border: medium none;
+    border-radius:5px;
     color: #eee;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     padding: 1%;
-    width: 40%;
+    margin:2% 0 0 0;
+    width: 25%;
     cursor: pointer
 }
 
@@ -633,3 +635,4 @@ p.ensure {
     border: 1px solid;
     padding: 10px;
 }
+

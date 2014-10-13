@@ -1,17 +1,76 @@
 $(function(){
 
 	$(document).ready(function() {
+
+		// disbles the backspace navigation, except in the input or textarea..
+		$(document).on("keydown", function (e) {
+		    if (e.which === 8 && !$(e.target).is("input, textarea")) {
+		        e.preventDefault();
+		    }
+		});
+
 		var base_url = "http://edostate.gov.ng/bipatas/";
 
     // assuming the controls you want to attach the plugin to
     // have the "datepicker" class set
     $('input.date_pick').Zebra_DatePicker({
-		view: 'years'
+		view: 'years',
 		});
+
+	// this is for the date of birth..
+	 $('input.date_birth').Zebra_DatePicker({
+		view: 'years',
+		direction: ['1900-01-01', '1999-12-31']
+		});
+
+	//Relationship specify functionalit
+	 $('#rship').change(function(){
+		  var what = $(this).val();
+		   if (what == "others"){
+		    $('#lbl_specify').slideDown();
+		  }else{
+		    $('#lbl_specify').slideUp();
+		  }
+
+		});
+	//relationship functionality ends here
+
+	//Religion specify functionalit
+	 $('#religion').change(function(){
+		  var what = $(this).val();
+		   if (what == "Others"){
+		    $('#lbl_specify_rel').slideDown();
+		  }else{
+		    $('#lbl_specify_rel').slideUp();
+		  }
+
+		});
+	//religion functionality ends here
+
+    //change of name date functionality
+	 $('input.date_con').Zebra_DatePicker({
+		view: 'years',
+		direction: ['1900-01-01', '2015-12-31']
+		});
+	//change of name date functionality ends here
 
     $('.yr_date').Zebra_DatePicker({
 	  format: 'Y'
 	  });
+
+	  // Primary school year logic
+	  $('.pri_yr_date').Zebra_DatePicker({
+	  	format: 'Y',
+	  	direction: ['1900', '2000']
+	  });
+	  // Primary school year Logic ends  here
+
+	// Tertiary school year logic
+	  $('.ter_yr_date').Zebra_DatePicker({
+	  	format: 'Y',
+	  	direction: ['1900', '2010']
+	  });
+	  // Tertiary school year Logic ends  here
 
 	$("#jtitle").autocomplete(base_url+"js/autocomplete.php", {
         selectFirst: false
@@ -43,7 +102,9 @@ $(function(){
 			});
 		}
 	}); // End of date of last promotion logic ..
-	
+
+
+    // Start date of Primary School logic..
 	$('.start_date').focusout(function(){
 		$('.end_date').val(" ");
 		var start_date = $(this).val();
@@ -55,34 +116,36 @@ $(function(){
 			  	direction: [start_date, false]
 			});
 		}
-	}); // End of date of last promotion logic ..
-	
+	}); // End of Primary School logic ..
 
-	$('.pane').hide();
-	$('#tabs-1').show();
-	$('.my_tabs li').click(function(e){
-		e.preventDefault();
-		var link = $(this).find('a').attr("href");
-		$('.my_tabs li').removeClass('visit');
-		$(this).addClass('visit');
-		$('.pane').hide();
-		$(link).show();
-	}); // not ver necessary anymore this section.
+	// Start date of secondary School logic..
+	$('.sec_start_yr').focusout(function(){
+		$('.sec_end_yr').val(" ");
+		var start_date = $(this).val();
+		if(start_date != ''){
+			$('input.start_date').attr('readonly', 'readonly');
+			$('.sec_end_yr').removeAttr('readonly');
+			$('.sec_end_yr').Zebra_DatePicker({
+				format: 'Y',
+			  	direction: [start_date, '2010']
+			});
+		}
+	}); // End of Primary secondary logic ..
 
-	$('#printform').click(function(){
-		$('.print').hide();
-		window.print();
-	}); // end of printing logic...
+	// Start date of Tertiary School logic..
+	$('.ter_start_yr').focusout(function(){
+		$('.ter_end_yr').val(" ");
+		var start_date = $(this).val();
+		if(start_date != ''){
+			$('input.start_date').attr('readonly', 'readonly');
+			$('.ter_end_yr').removeAttr('readonly');
+			$('.ter_end_yr').Zebra_DatePicker({
+				format: 'Y',
+			  	direction: [start_date, '2010']
+			});
+		}
+	}); // End of Primary Tertiary logic ..
 
-	$('#goback').click(function(){
-		window.location.href = "../staff/index.php?id=2";
-	});// cannot remember what this does
-
-	$('.tooltips').hover(function(){
-		$(this).children('h6').fadeIn();
-	},function(){
-		$(this).children('h6').fadeOut();
-	});// end of tooltip implementation prototype
 
 	$('#accnotype').focusout(function(){
 		$('#accno').val(" ");
@@ -90,9 +153,18 @@ $(function(){
 		if(acct_type == 'Regular'){
 			$('#accno').attr('maxlength', '15');
 		}else{
-			$('#accno').attr('maxlength', '10');
+			$('#accno').attr('maxlength', '11');
 		}
 	}); // account number characters logic
+
+
+	$('table.sec_sch').hide();
+	$('table.ter_sch').hide();
+	$('.ter_inst').attr('disabled', 'disabled');
+	$('#nysc').attr('disabled', 'disabled');
+
+
+
 
 	$('button.add_sec_sch').click(function(e){
 		e.preventDefault();
@@ -108,6 +180,10 @@ $(function(){
 			return;
 		}
 
+		if($('table.sec_sch').is(":hidden")) {
+			$('table.sec_sch').show();
+		}
+
 		var i;
 		$(".sec_sch tbody").append(
         "<tr>"+
@@ -117,6 +193,7 @@ $(function(){
         "<td>"+ secqual +"</td>"+
         "<td>"+ "<button class=\"rmv\">-</button>" +"</td>"+
         "</tr>");
+        $('.ter_inst').removeAttr('disabled'); // this removes the hold on tertiary in stitution fields
 
         $.ajax({
 	        url: base_url+'register/ajax_call',
@@ -155,6 +232,14 @@ $(function(){
 
 	}); // end of add secondary school logic..
 
+
+	// prevents field from accepting Numbers
+	$('input.onlytext').bind('keyup blur',function(){
+	    var node = $(this);
+	    node.val(node.val().replace(/[^A-Za-z ]/g,'') ); }
+	);
+
+
 	$('button.add_ter_sch').click(function(e){
 		e.preventDefault();
 		var nameotersch = $('#notersch').val();
@@ -164,9 +249,13 @@ $(function(){
 		var matno = $('#matno').val();
 		var spectn = $('#spectn').val();
 
-		if(notersch=""||tyoentry==""||tyograd==""||tqualobt==""||matno==""||spectn==""){
+		if(notersch=""||tyoentry==""||tyograd==""||tqualobt==""||spectn==""){
 			alert("Please feel the necessary fields");
 			return;
+		}
+
+		if($('table.ter_sch').is(":hidden")) {
+			$('table.ter_sch').show();
 		}
 
 		var i;
@@ -180,6 +269,8 @@ $(function(){
         "<td>"+ spectn +"</td>"+
         "<td>"+ "<button class=\"rmv2\">-</button>" +"</td>"+
         "</tr>");
+
+        $('#nysc').removeAttr('disabled'); // this removes the hold on NYSC fields
 
          $.ajax({
 	        url: base_url+'register/ajax_call',
@@ -363,7 +454,7 @@ $(function(){
 	get_sec_schls(1);
 	get_ter_schls(2);
 	get_training(3);
-	
+
 	$('.gtp button').click(function(){
 		window.location.href = 'print_page';
 	});

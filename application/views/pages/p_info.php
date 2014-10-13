@@ -15,17 +15,16 @@ $status1 = "";
 <?php $this->load->view('partials/header'); ?>
 
 <div id="content">
-	 <!-- -------------------------FULL NAME AND MINISTRY OF THE PERSON REGISTERING-------------------------------------------------- -->
+	 <!-- -------------------------FULL NAME AND MINISTRY OF THE PERSON REGISTERING----------------------------------------------->
 		        <h4><strong style="font-size: 1.2em;"><?php echo  $this->session->userdata('full_name'); ?></strong>
 		        <?php echo $this->session->userdata('staff_ministry'); ?></h4>
-	<!-- ----------------------------------------------------------------------------------------------------------------------- -->
+	 <!-- ------------------------------------------------------------------------------------------------------------------------->
 		    <div class="box_wrapper">
 		        <div class="left">
 		            <div class="active" id="page-1"> <a href="#">Personal Information</a></div>
 		            <div class="disabled" id="page-2"><a href="#">Employment record</a></div>
-					 <div class="disabled" id="page-5"><a href="#">Bank Details</a></div>
+					<div class="disabled" id="page-5"><a href="#">Bank Details</a></div>
 		            <div class="disabled" id="page-3"><a href="#">Educational Record</a></div>
-
 		            <div class="disabled" id="page-4"><a href="#">Training</a></div>
 		        </div>
 
@@ -33,9 +32,9 @@ $status1 = "";
 	<?php echo form_open_multipart('register/personal_information'); ?>
 		<h1 class="div-title">Personal Information</h1>
 
-					<!-- ---------------------------------------FORM ERROR IS DISPLAYED HERE-------------------------------------- -->
+		<!-----------------------------------------FORM ERROR IS DISPLAYED HERE--------------------------------------->
 							<?php echo validation_errors(); ?>
-		<!-- -------------------------------------------------------------------------------------------------------- -->
+		<!------------------------------------------------------------------------------------------------------------>
 
 				<div class="input_row ">
 					<div class="input">
@@ -115,7 +114,7 @@ $status1 = "";
 		                    <div class="fclear"></div>
 		       </div>
 
-				<div class="input_row section">
+				<div class="input_row">
 		          <div class="input">
 		                        <label id="lbl_gender" for="sex">Sex <span style="color:red;">*</span>
 									<fieldset <?php highlight_field($required_fields, 'sex'); ?>>
@@ -139,10 +138,10 @@ $status1 = "";
 
 
 
-		       <div class="input_row section">
+		       <div class="input_row">
 		          <div class="input">
 		             <label id="lbl_dob" for="dob">Date of Birth<span style="color:red;">*</span>
-		               <input <?php highlight_field($required_fields, 'dob'); ?>  type="text" id="dob" name="dob" class="date_pick" value="<?php echo set_value('dob'); ?>"/>
+		               <input <?php highlight_field($required_fields, 'dob'); ?>  type="text" id="dob" name="dob" class="date_birth" value="<?php echo set_value('dob'); ?>"/>
 		                	<!--<span class="info">(date format is dd/mm/yyyy)</span>-->
 					</label>
 		          </div>
@@ -153,13 +152,14 @@ $status1 = "";
 		          <div class="fclear"></div>
 		       </div>
 
-			    <div class="input_row section">
+			    <div class="input_row">
 		          <div class="input">
 		             <label id="lbl_height" for="height">Height<span style="color:red;">*</span>
-		               <input <?php highlight_field($required_fields, 'height'); ?>  type="text" maxlength="4" id="height" name="height" value="<?php echo set_value('height'); ?>"/>
+		               <input <?php highlight_field($required_fields, 'height'); ?>  type="text" maxlength="4" id="height" name="height" value="<?php echo set_value('height'); ?>" />
 		                	<span class="info">(Height format is metres (numbers only))</span>
 					</label>
 		          </div>
+
 		          <div class="help">
 		            <h4 style=""><b>Help:</b>&nbsp;Height</h4>
 					<p>Enter your height measurement e.g 1.80 for 1.80m</p>
@@ -167,7 +167,7 @@ $status1 = "";
 		          <div class="fclear"></div>
 		       </div>
 
-			    <div class="input_row section">
+			    <div class="input_row">
 		          <div class="input">
 		             <label id="lbl_bgroup" for="bgroup">Blood Group
 		              <select <?php highlight_field($required_fields, 'bgroup'); ?>  id="bgroup" name="bgroup" >
@@ -225,7 +225,7 @@ $status1 = "";
 		         <div class="fclear"></div>
 		        </div>
 
-				<div class="input_row section">
+				<div class="input_row">
 		          <div class="input">
 		             <label id="lbl_maiden_name" for="maidname">Maiden Name
 		                <input type="text" id="maidname" name="maidname" value="<?php echo set_value('maidname'); ?>" />
@@ -242,7 +242,7 @@ $status1 = "";
 				<div class="input_row">
 		          <div class="input">
 		             <label id="lbl_doc_name" for="don">Date of Change of Name
-		                <input type="text" class="date_pick" id="don" name="don" value="<?php echo set_value('don'); ?>"/>
+		                <input type="text" class="date_con" id="don" name="don" value="<?php echo set_value('don'); ?>"/>
 		                	<!---<span class="info">(date format is dd/mm/yyyy)</span>-->
 					</label>
 		          </div>
@@ -307,6 +307,10 @@ $status1 = "";
 						</select>
 						<!--<input type="text" id="o_religion" name="o_religion" value=""/>-->
 		           </label>
+		           <label id="lbl_specify_rel" for="sprl" style="display: none;"><br>
+			              <input type="text" id="sprl" name="sprl" value="<?php echo set_value('religion'); ?>" placeholder="Please specify"/>
+					</label>
+
 		         </div>
 				 <div class="help">
 		            <h4 style=""><b>Help:</b>&nbsp;Your Religion</h4>
@@ -316,7 +320,7 @@ $status1 = "";
 		        </div>
 
 
-				<div class="input_row section">
+				<div class="input_row">
 		          <div class="input">
 		             <label id="lbl_street" for="street">Address
 		              <input <?php highlight_field($required_fields, 'street'); ?>  type="text" id="street" name="street" value="<?php echo set_value('street'); ?>"/>
@@ -359,9 +363,9 @@ $status1 = "";
 
 <!-- ****************************Nextofkin details start here******************************************************* -->
 
-		       <div class="input_row ">
+		       <div class="input_row section">
 					<div class="input">
-		                        <label id="lbl_noktitle" for="noktitle">Next of Kin <span style="color:red;">*</span>
+		                        <label id="lbl_noktitle" for="noktitle">Next of Kin
 		                            <select <?php highlight_field($required_fields, 'noktitle'); ?>  id="noktitle" name="noktitle">
 										<option value=""> </option>
 										<option value="Mr" <?php echo set_select('noktitle', 'Mr');  ?>>Mr</option>
@@ -371,7 +375,7 @@ $status1 = "";
 										<option value="Dr" <?php echo set_select('noktitle', 'Dr'); ?>>Dr</option>
 										<option value="Prof" <?php echo set_select('noktitle', 'Prof'); ?>>Prof</option>
 									</select>
-									<span class="info">Next of Kin Title<span style="color:red;">*</span></span>
+									<span class="info">Title<span style="color:red;">*</span></span>
 		                        </label>
 		                    </div>
 		                    <div class="help">
@@ -382,7 +386,7 @@ $status1 = "";
 		                    <div class="fclear"></div>
 				</div>
 
-			   <div class="input_row section">
+			   <div class="input_row">
 		          <div class="input">
 		            <!-- <label id="lbl_noksn" for="noksn">Next of Kin-->
 		              <input <?php highlight_field($required_fields, 'noksn'); ?>  type="text" id="noksn" name="noksn" value="<?php echo set_value('noksn'); ?>"/>
@@ -400,7 +404,7 @@ $status1 = "";
 		          <div class="input">
 		             <label id="lbl_nokfname" for="nokfname">
 		              <input <?php highlight_field($required_fields, 'nokfname'); ?>  type="text" id="nokfname" name="nokfname" value="<?php echo set_value('nokfname'); ?>"/>
-		              <span class="info">Next of Kin First Name<span style="color:red;">*</span></span>
+		              <span class="info">First Name<span style="color:red;">*</span></span>
 					</label>
 		          </div>
 		          <div class="help">
@@ -490,6 +494,10 @@ $status1 = "";
 							<option value="friend" <?php echo set_select('rship', 'friend'); ?> >Friend</option>
 							<option value="others" <?php echo set_select('rship', 'others'); ?> >Others</option>
 						</select>
+
+						<label id="lbl_specify" for="spnk" style="display: none;"><br>
+			              <input type="text" id="specify" name="specify" value="<?php echo set_value('rship'); ?>" placeholder="Please specify"/>
+						</label>
 		              <span class="info">Relationship<span style="color:red;">*</span></span>
 					</label>
 		          </div>

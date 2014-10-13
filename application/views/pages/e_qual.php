@@ -57,7 +57,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 		<div class="input_row ">
 					<div class="input">
 		                        <label id="lbl_pyoentry" for="pyoentry">
-		                            <input <?php highlight_field($required_fields, 'pyoentry'); ?> type="text" id="pyoentry" name="pyoentry" maxlength="8" class="yr_date start_date" value="<?php echo set_value('pyoentry'); ?>" /><span class="info">
+		                            <input <?php highlight_field($required_fields, 'pyoentry'); ?> type="text" id="pyoentry" name="pyoentry" maxlength="8" class="pri_yr_date start_date" value="<?php echo set_value('pyoentry'); ?>" /><span class="info">
 		                            Year of Entry<span style="color:red;">*</span>
 		                            </span>
 
@@ -74,7 +74,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 				<div class="input_row ">
 					<div class="input">
 		                        <label id="lbl_pyograd" for="pyograd">
-		                            <input <?php highlight_field($required_fields, 'pyograd'); ?> type="text" id="pyograd" name="pyograd" maxlength="8" class="end_date" value="<?php echo set_value('pyograd'); ?>" /><span class="info">
+		                            <input <?php highlight_field($required_fields, 'pyograd'); ?> type="text" id="pyograd" name="pyograd" maxlength="8" class="end_date" value="<?php echo set_value('pyograd'); ?>" readonly /><span class="info">
 		                            Year of Graduation<span style="color:red;">*</span>
 		                            </span>
 
@@ -144,7 +144,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 				<div class="input_row">
 					<div class="input">
 		                        <label id="lbl_syoentry" for="syoentry">
-		                            <input type="text" id="syoentry" name="syoentry" maxlength="4" class="yr_date"/><span class="info">
+		                            <input type="text" id="syoentry" name="syoentry" maxlength="4" class="pri_yr_date sec_start_yr"/><span class="info">
 		                            Year of Entry
 		                            </span>
 
@@ -161,7 +161,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 				<div class="input_row">
 					<div class="input">
 		                        <label id="lbl_syograd" for="syograd">
-		                            <input type="text" id="syograd" name="syograd" maxlength="4" class="yr_date" /><span class="info">
+		                            <input type="text" id="syograd" name="syograd" maxlength="4" class="sec_end_yr" readonly/><span class="info">
 		                            Year of Graduation
 		                            </span>
 
@@ -190,7 +190,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 		         </div>
 
 		         <div class="fclear"></div>
-		         <button class="add_sec_sch add_button" type="button">+</button>
+		         <button class="add_sec_sch add_button" type="button">Add This Record</button>
                          <p class="ensure">Ensure you click this button to add a record</p>
 		        </div>
 
@@ -214,7 +214,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 			   		</table>
 					<div class="input">
 		                        <label id="lbl_notersch" for="notersch">Tertiary Education
-		                            <input type="text" id="notersch" name="notersch" /> <span class="info">
+		                            <input type="text" id="notersch" name="notersch" class="ter_inst onlytext"/> <span class="info">
 		                            Name of Institution
 		                            </span>
 
@@ -232,7 +232,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 				<div class="input_row">
 					<div class="input">
 		                        <label id="lbl_tyoentry" for="tyoentry">
-		                            <input type="text" id="tyoentry" name="tyoentry" maxlength="4" class="yr_date" /><span class="info">
+		                            <input type="text" id="tyoentry" name="tyoentry" maxlength="4" class="ter_yr_date ter_start_yr ter_inst" /><span class="info">
 		                            Year of Entry
 		                            </span>
 
@@ -249,7 +249,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 				<div class="input_row">
 					<div class="input">
 		                        <label id="lbl_tyograd" for="tyograd">
-		                            <input type="text" id="tyograd" name="tyograd" maxlength="4" class="yr_date" /><span class="info">
+		                            <input type="text" id="tyograd" name="tyograd" maxlength="4" class="ter_end_yr ter_inst" readonly/><span class="info">
 		                            Year of Graduation
 		                            </span>
 
@@ -266,7 +266,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 				<div class="input_row">
 					<div class="input">
 		                        <label id="lbl_tqualobt" for="tqualobt">
-		                        	<select id="tqualobt" name="tqualobt">
+		                        	<select id="tqualobt" name="tqualobt" class="ter_inst">
 										<option value="" selected="selected"></option>
 										<option value="PHD" <?php echo set_select('tqualobt', 'PHD'); ?> >PHD</option>
 										<option value="Masters" <?php echo set_select('tqualobt', 'Masters'); ?> >Masters</option>
@@ -292,7 +292,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 				<div class="input_row">
 					<div class="input">
 		                        <label id="lbl_matno" for="matno">
-		                            <input type="text" id="matno" name="matno" /><span class="info">
+		                            <input type="text" id="matno" name="matno" class="ter_inst" /><span class="info">
 		                            Matriculation No.
 		                            </span>
 
@@ -309,7 +309,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 				<div class="input_row">
 					<div class="input">
 		                        <label id="lbl_spectn" for="spectn">
-		                            <input type="text" id="spectn" name="spectn" /><span class="info">
+		                            <input type="text" id="spectn" name="spectn" class="ter_inst onlytext"/><span class="info">
 		                            Specialization
 		                            </span>
 
@@ -329,7 +329,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 				<div class="input_row  section">
 					<div class="input">
 		                        <label id="lbl_nysc" for="nysc">NYSC
-		                            <input type="text" id="nysc" name="nysc" /><span class="info">
+		                            <input type="text" id="nysc" name="nysc"/><span class="info">
 		                            NYSC Cert. No.
 		                            </span>
 
@@ -345,7 +345,7 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 
 		<div style="margin:20px 5px 5px 30px;">
 					<div>
-						<span><input type="reset" id="reset" value="Back" class="btn btn-inverse" style="min-width: 160px;"/></span>
+						<span><input type="button" id="goback" name="gobackk" value="Back" class="btn btn-inverse" style="min-width: 160px;"/></span>
 						<!--<span><input type="button"  name="save" class="btn btn-inverse" style="width: 120px;" value="Save for later"/></span>-->
 						<span><input type="submit" id="submitform" value="Continue>>" name="submit" class="btn btn-inverse" style="min-width:160px; margin-left:15px;"/></span>
 					</div>

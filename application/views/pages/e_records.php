@@ -137,8 +137,9 @@ $required_fields = array('minname', 'minaddstr', 'mincity', 'govttier', 'file_no
 		        <div class="input_row ">
 					<div class="input">
 		                        <label id="lbl_doc_id" for="file_no">
-		                            <input <?php highlight_field($required_fields, 'file_no'); ?> type="text" id="file_no" name="file_no" value="<?php echo $this->session->userdata('file_no'); ?>" readonly style="background:#F5F5F5;"/><span class="info">
-		                            File Number.<span style="color:red;">*</span>
+		                            <input <?php highlight_field($required_fields, 'file_no'); ?> type="text" id="file_no" name="file_no" value="<?php echo $this->session->userdata('file_no'); ?>" readonly style ="background:#F5F5F5; color:#aaa;" />
+		                            <span class="info">
+		                            File Number<span style="color:red;">*</span>
 		                            </span>
 
 		                        </label>
@@ -171,7 +172,7 @@ $required_fields = array('minname', 'minaddstr', 'mincity', 'govttier', 'file_no
 				<div class="input_row ">
 					<div class="input">
 		                        <label id="lbl_doemp" for="doemp">
-		                            <input <?php highlight_field($required_fields, 'doemp'); ?> type="text" id="doemp" name="doemp" class="date_pick emp_date" value="<?php echo set_value('doemp'); ?>"/><span class="info">
+		                            <input <?php highlight_field($required_fields, 'doemp'); ?> type="text" id="doemp" name="doemp" class="date_con emp_date" value="<?php echo set_value('doemp'); ?>"/><span class="info">
 		                            Date of First Appointment<span style="color:red;">*</span>
 		                            </span>
 
