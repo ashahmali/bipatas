@@ -38,7 +38,7 @@
 	 $street.'';
 
 	 $city.'';
-	 
+
 	  $state.'';
 
 	 $lga.'';
@@ -431,6 +431,11 @@
 
 			</div><!-- -----Training Ends Here-------- -->
 			<div class="print_button"><button>PRINT</button></div>
+
+			<script>
+				$('#btn_menu_review').removeClass('disabled');
+				$('#btn_menu_review').addClass('active');
+			</script>
 
 
 <?php $this->load->view('partials/footer'); ?>

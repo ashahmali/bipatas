@@ -353,4 +353,5 @@ $status4 = ""; $status1 = "visited"; $status2 = "visited"; $status3 = "visited";
 	<?php echo form_close(); ?>
 </div>
 
+
 <?php $this->load->view("partials/footer.php"); ?>

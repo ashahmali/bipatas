@@ -29,8 +29,8 @@ class Staff extends CI_Controller{
 		$b_details 	= $this->bank_details_model->find_by_personal_record_id($this->staff_id);
 		$training 	= $this->training_record_model->find_by_personal_record_id($this->staff_id);
 		//Next, let's start setting variables from each model.
-		
-		
+
+
 		//Personal information model
 		$data['firstName'] 		= $this->session->userdata('fname');
 		$data['middleName'] 	= $this->session->userdata('mname');
@@ -80,9 +80,9 @@ class Staff extends CI_Controller{
 		$data['yearEnterPrim']		= isset($e_qual->pyoentry) 	? $e_qual->pyoentry : "";
 		$data['yearPrimGrad']		= isset($e_qual->pyograd) 	? $e_qual->pyograd 	: "";
 		$data['primQual']			= isset($e_qual->pqualobt) 	? $e_qual->pqualobt : "";
-    	$data['scdrySchlName']		= isset($e_qual->nosecsch) 	? $e_qual->nosecsch : "";		
+    	$data['scdrySchlName']		= isset($e_qual->nosecsch) 	? $e_qual->nosecsch : "";
 		$_SESSION['sec_sch_json'] 	= isset($e_qual->nosecsch) 	? $e_qual->nosecsch : "";
-		$data['TatiarySchlName']	= isset($e_qual->notersch) 	? $e_qual->notersch : "";		
+		$data['TatiarySchlName']	= isset($e_qual->notersch) 	? $e_qual->notersch : "";
 		$_SESSION['ter_sch_json']	= isset($e_qual->notersch) 	? $e_qual->notersch : "";
 		$data['nyscNum'] 			= isset($e_qual->nysc) 		? $e_qual->nysc 	: "";
 
@@ -97,7 +97,8 @@ class Staff extends CI_Controller{
 		$data['accname']		= isset($b_details->accname) ? $b_details->accname : '';
 
 		//Training model
-		$data['trainingCourse'] 	= $training->tracourse;		$_SESSION['training_json']	= $training->tracourse;
+		$data['trainingCourse'] 	= $training->tracourse;
+		$_SESSION['training_json']	= $training->tracourse;
 
 		$this->load->view('pages/staff', $data);
 	}
@@ -206,13 +207,13 @@ class Staff extends CI_Controller{
 
 			}
 	}
-	
-function fetch_edu_data($which){		
-	$sec_sch =  $_SESSION['sec_sch_json'];
 
-	$ter_sch = $_SESSION['ter_sch_json'];
-	
-	$training = $_SESSION['training_json'];
+function fetch_edu_data($which){
+	$sec_sch =  (!empty($_SESSION['sec_sch_json'])) ? $_SESSION['sec_sch_json'] : " ";
+
+	$ter_sch = (!empty($_SESSION['ter_sch_json'])) ? $_SESSION['ter_sch_json'] : " ";
+
+	$training = (!empty($_SESSION['training_json'])) ? $_SESSION['training_json'] : " ";
 
 	switch ($which) {
 		case 1:
@@ -236,7 +237,7 @@ function personal_information(){
 	//first load the model associated with this controller
 	$this->load->model('personal_information_model');
 	$this->load->model('others');
-	
+
 	//get all states list
 		$data['state_lists']	= $this->others->get_all_states();
 
@@ -315,7 +316,7 @@ function personal_information(){
 		$this->session->unset_userdata('mname');
 		$this->session->unset_userdata('sname');
 		$this->session->unset_userdata('full_name');
-		
+
 		session_destroy();
 		$this->session->sess_destroy();
 		redirect('home');

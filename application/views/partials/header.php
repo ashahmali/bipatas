@@ -64,11 +64,11 @@
         	<b>1.</b> &nbsp; Register &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         	<i class="icon-chevron-right">></i>
         </a>
-        <a id="btn_menu_review" href="javascript:;" class="btn  disabled">
+        <a id="btn_menu_review" href="javascript:;" class="btn disabled">
         	<b>2.</b> &nbsp; Review &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         	<i class="icon-chevron-right">></i>
         </a>
-        <a id="btn_menu_submit" href="javascript:;" class="btn  disabled">
+        <a id="btn_menu_submit" href="javascript:;" class="btn disabled">
         	<b>3.</b> &nbsp; Submit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         	<i class="icon-chevron-right">></i>
         </a>

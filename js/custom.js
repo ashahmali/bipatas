@@ -10,6 +10,7 @@ $(function(){
 		});
 
 		var base_url = "http://edostate.gov.ng/bipatas/";
+		//var base_url = "http://localhost/bipatas/";
 
     // assuming the controls you want to attach the plugin to
     // have the "datepicker" class set
@@ -160,6 +161,7 @@ $(function(){
 
 	$('table.sec_sch').hide();
 	$('table.ter_sch').hide();
+	$('table.trainings').hide();
 	$('.ter_inst').attr('disabled', 'disabled');
 	$('#nysc').attr('disabled', 'disabled');
 
@@ -207,30 +209,36 @@ $(function(){
 	        error: function(data){alert('failed');},
 	        });
 
-	        $('button.rmv').click(function(e){
-	        	var that = $(this);
-			e.preventDefault();
-			i = $(this).parents('tr').find('td.use').html();
-	        	$.ajax({
-		        url: base_url+'register/ajax_call',
-		        data : {
-		        	del_sec_sch: secschname,
-		        	},
-		        success: function(data){
-		        	alert(data);
-		        	that.parents('tr').hide();
-		        	},
-		        error: function(data){alert('failed');},
-		        });
+	        // Secondary school remove button
+			$('button.rmv').click(function(e){
+				alert('a button cliked');
 
-			});
+		        	var that = $(this);
+					i = $(this).parents('tr').find('td.use').html();
+		        	$.ajax({
+			        url: base_url+'register/ajax_call',
+			        data : {
+			        	del_sec_sch: secschname,
+			        	},
+			        success: function(data){
+			        	alert(data);
+			        	that.parents('tr').hide();
+			        	},
+			        error: function(data){alert('failed');},
+			        });
+			       // e.stopPropagation();
+			        e.preventDefault();
 
-		      $('#nosecsch').val("");
-	          $('#syoentry').val("");
-	          $('#syograd').val("");
-	          $('#squalobt').val("");
+				});
+
+	        $('#nosecsch').val("");
+	        $('#syoentry').val("");
+	        $('#syograd').val("");
+	        $('#squalobt').val("");
 
 	}); // end of add secondary school logic..
+
+
 
 
 	// prevents field from accepting Numbers
@@ -325,6 +333,10 @@ $(function(){
 			return;
 		}
 
+		if($('table.trainings').is(":hidden")) {
+			$('table.trainings').show();
+		}
+
 		var i;
 		$(".trainings tbody").append(
         "<tr>"+
@@ -389,6 +401,9 @@ $(function(){
 			url: base_url+'staff/fetch_edu_data/'+arg,
 			dataType: "JSON"
 		}).done(function (data) {
+			if(data != null || data != " "){
+				$('table.sec_sch').show();
+			}
 				$.each(data, function () {
 					details += "<tr>"+
 					"<td class=\"use\">"+ this.secsch_name +"</td>"+
@@ -399,6 +414,7 @@ $(function(){
 			        "</tr>";
 			});
 			//alert(details);
+
 			$(".sec_sch tbody").append(details);
 		});
 	}// The Secondary school fetch function ends here
@@ -411,6 +427,9 @@ $(function(){
 			url: base_url+'staff/fetch_edu_data/'+arg,
 			dataType: "JSON"
 		}).done(function (data) {
+			if(data != null || data != " "){
+				$('table.ter_sch').show();
+			}
 				$.each(data, function () {
 					details += "<tr>"+
 			        "<td class=\"use2\">"+ this.notersch +"</td>"+
@@ -423,6 +442,7 @@ $(function(){
 			        "</tr>";
 			});
 			//alert(details);
+
 			$(".ter_sch tbody").append(details);
 		});
 	}// The Tertiary school fetch ends here..
@@ -454,6 +474,74 @@ $(function(){
 	get_sec_schls(1);
 	get_ter_schls(2);
 	get_training(3);
+
+
+	// heeight logic start here.
+	$('#height').click(function(){
+	  $('div.h_logic').show();
+	  $('.h_cancel').click(function(){ $('div.h_logic').hide(); });
+		var h_val = 0;
+		var unit = "";
+		var result = 0;
+		$('.log_height').focusout(function(){
+		  var son = $(this).val();
+		  if(son == " " || !($.isNumeric(son))){
+		    $(this).css('border-color', '#FF0000');
+		    $(this).val(null);
+		    $(this).attr('placeholder', 'Not a valid value');
+		  }else{
+		    $(this).css('border', 'none');
+		    h_val = $(this).val();
+		    unit = $('.h_unit').val();
+		  }
+		});
+
+		$('.h_update').click(function(){
+		  h_val = $('.log_height').val();
+		  unit = $('.h_unit').val();
+		  if (h_val != null && unit != null){
+		    switch(unit){
+		      case "cm":
+		        result = h_val * 1;
+		        if(result <= 300){
+		          $('#height').val(result);
+		          $('div.h_logic').hide();
+		        }else{
+		          $('.h_res').text(result+"cm");
+		        }
+		        break;
+
+		        case "m":
+		        result = h_val * 100;
+		        if(result <= 300){
+		          $('#height').val(result);
+		          $('div.h_logic').hide();
+		        }else{
+		          $('.h_res').text(result+"cm");
+		        }
+		        break;
+
+		        case "ft":
+		        result = h_val * 30.48;
+		        if(result <= 300){
+		          $('#height').val(result);
+		          $('div.h_logic').hide();
+		        }else{
+		          $('.h_res').text(result+"cm");
+		        }
+		        break;
+
+		      default:
+		        alert("an error has occured");
+		        break;
+		    }
+		  }
+		});
+	});
+
+
+
+	//Hieght Logic Ends here.
 
 	$('.gtp button').click(function(){
 		window.location.href = 'print_page';

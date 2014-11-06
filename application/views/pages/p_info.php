@@ -152,12 +152,36 @@ $status1 = "";
 		          <div class="fclear"></div>
 		       </div>
 
-			    <div class="input_row">
+			    <div class="input_row" style="position: relative">
 		          <div class="input">
 		             <label id="lbl_height" for="height">Height<span style="color:red;">*</span>
-		               <input <?php highlight_field($required_fields, 'height'); ?>  type="text" maxlength="4" id="height" name="height" value="<?php echo set_value('height'); ?>" />
+		               <input <?php highlight_field($required_fields, 'height'); ?>  type="text" maxlength="4" id="height" name="height" value="<?php echo set_value('height'); ?>" readonly/>
 		                	<span class="info">(Height format is metres (numbers only))</span>
 					</label>
+					<div class="h_logic" style="display:none;">
+						<table cellspacing="0">
+							<tr>
+								<td valign="top">Input Height<span style="color:red;">*</span></td>
+								<td>
+									<input type="text" class="log_height"/><br />
+									<select class="h_unit">
+										<option value="cm">Centimeters</option>
+										<option value="m">Metres</option>
+										<option value="ft">Feet</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td valign="top">Heigth(in cm)</td>
+								<td>
+									<span class="h_res"></span>&nbsp;<span style="color:red;">Max. 300cm</span><br /><br />
+									<input type="button" value="Update" class="h_update" />&nbsp;
+									<input type="button" value="Cancel" class="h_cancel" /><br /><br />
+									<span style="color: red;">Example for height in feets : For 5 feet 11 inch. use 5.11</span>
+								</td>
+							</tr>
+						</table>
+					</div>
 		          </div>
 
 		          <div class="help">
